@@ -16,7 +16,7 @@ public class UserDao {
 //        userDao.listUser().forEach(n -> System.out.println(n));
 
         //分页查询
-        userDao.listUser2(50, 1, 3).forEach(n -> System.out.println(n));
+        userDao.listUser2(50, 3).forEach(n -> System.out.println(n));
 
         //查询一行数据
 //        User user = userDao.selectUser(1);
@@ -59,9 +59,9 @@ public class UserDao {
         return template.query(sql, new BeanPropertyRowMapper<>(User.class));
     }
 
-    private List<User> listUser2(Integer age, Integer page, Integer pageSize) {
-        String sql = "select * from sys_user where age>? limit ?,?";
-        return template.query(sql, new BeanPropertyRowMapper<>(User.class), age, page, pageSize);
+    private List<User> listUser2(Integer age, Integer page) {
+        String sql = "select * from sys_user where age>? limit ?,3";
+        return template.query(sql, new BeanPropertyRowMapper<>(User.class), age, page);
     }
 
     private User selectUser(Integer id) {

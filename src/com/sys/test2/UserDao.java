@@ -13,9 +13,9 @@ public class UserDao {
 
     public static void main(String[] args) {
         //分页查询
-//        PageBean pageBean = new PageBean();
-//        pageBean.setPage(3);
-//        findAll(pageBean).forEach(System.out::println);
+        PageBean pageBean = new PageBean();
+        pageBean.setPage(3);
+        findAll(pageBean).forEach(System.out::println);
 
         //添加数据
 //        User user = new User();
@@ -33,7 +33,7 @@ public class UserDao {
 //        deleteUser(13);
 
         //修改数据
-        updateUser("马云");
+//        updateUser("马云");
     }
 
     private static void updateUser(String name) {
