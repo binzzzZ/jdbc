@@ -16,7 +16,7 @@ public class UserDao {
 //        userDao.listUser().forEach(n -> System.out.println(n));
 
         //分页查询
-        userDao.listUser2(50, 3).forEach(n -> System.out.println(n));
+        userDao.listUser2(50, 3).forEach(System.out::println);
 
         //查询一行数据
 //        User user = userDao.selectUser(1);
