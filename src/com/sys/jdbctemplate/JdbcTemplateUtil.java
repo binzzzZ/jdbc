@@ -47,7 +47,7 @@ public class JdbcTemplateUtil {
     /**
      * 关闭连接
      *
-     * @param conn
+     * @param conn 连接对象
      * @param ps
      * @param rs
      */
